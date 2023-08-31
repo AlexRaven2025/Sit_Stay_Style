@@ -4,8 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
-
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -17,8 +15,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install Main Directory Dependencies
-        run: npm install
-      - name: Install subdirectory dependencies
+      - name: Install client Dependencies
         run: npm ci
       #build test scripts jest or reat-test libary
