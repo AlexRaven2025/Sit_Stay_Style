@@ -14,8 +14,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Clear npm cache
-        run: npm cache clean --force
+      - name: Debug Directory and Files
+        run: |
+          pwd
+          ls -la
 
       - name: Install client Dependencies
         run: npm ci
