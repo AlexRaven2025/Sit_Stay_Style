@@ -13,6 +13,6 @@ jobs:
           node-version: 16
 
       - name: Navigate to Client and Install Dependencies
-        run: cd client && npm ci
+        run: cd client && npm install
 
       #build test scripts jest or reat-test libary
