@@ -15,8 +15,8 @@ jobs:
       - name: Install Main Directory Dependencies
         run: npm ci
 
-      - name: Navigate to Client/Main_App
-        run: cd client/main_app
+      - name: Navigate to Client
+        run: cd client
 
       - name: Install Subdirectory Dependencies
         run: npm ci
