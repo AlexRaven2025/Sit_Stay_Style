@@ -7,18 +7,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Navigate to Client
-        run: cd /client
-
       - name: Set Up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Debug Directory and Files
-        run: |
-          pwd
-          ls -la
 
-      - name: Install client Dependencies
-        run: npm ci
+      - name: Navigate to Client and Install Dependencies
+        run: cd client && npm ci
+
       #build test scripts jest or reat-test libary
