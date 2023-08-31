@@ -16,10 +16,12 @@ jobs:
         run: npm ci
 
       - name: Navigate to Client
-        run: cd client
+        run: cd client/main_app
 
       - name: Install Subdirectory Dependencies
         run: npm ci
+      - name: Install Testing Dependencies
+        run: npm install jest --save-dev
 
       - name: Run Tests
         run: npm test
