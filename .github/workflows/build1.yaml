@@ -12,7 +12,13 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install Dependencies
+      - name: Install Main Directory Dependencies
+        run: npm ci
+
+      - name: Navigate to Client/Main_App
+        run: cd client/main_app
+
+      - name: Install Subdirectory Dependencies
         run: npm ci
 
       - name: Run Tests
