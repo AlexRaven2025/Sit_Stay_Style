@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Navigate to Client
-        run: cd client/main_app
+        run: cd client
 
       - name: Set Up Node.js
         uses: actions/setup-node@v2
