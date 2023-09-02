@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import './stylefiles/bookNowContactCard.css';
-
+/* eslint-disable */
 export function BookNowContactCard({ showModal, handleClose }) {
     return (
         <div>

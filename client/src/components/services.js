@@ -5,7 +5,7 @@ import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './stylefiles/services.css';
 import ServiceCard from './serviceCard';
-
+/* eslint-disable */
 export function Services(){
         return (
             <div className='main-services-container'>

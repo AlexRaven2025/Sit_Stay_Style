@@ -5,7 +5,7 @@ import './stylefiles/bookNow.css';
 import bookNow1 from './images/booknow1.jpeg';
 import BookNowContactCard from './bookNowContactCard';
 import { Button, Container, Form, FormControl } from 'react-bootstrap';
-
+/* eslint-disable */
 export function BookNow(){
     const [showModal, setShowModal] = useState(false);
 

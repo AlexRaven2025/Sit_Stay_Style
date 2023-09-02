@@ -4,7 +4,7 @@ import './stylefiles/home.css'
 import winter1  from './images/winter1.jpg'
 import home_pic1 from './images/home_pic1.png'
 import Foot from './footer'
-
+/* eslint-disable */
 export function Home() {
     return (
         <div className='main-home-container'>

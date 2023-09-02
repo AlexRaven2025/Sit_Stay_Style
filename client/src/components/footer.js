@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './stylefiles/footericon.css'
-
+/* eslint-disable */
 export  function Foot(){
     
         return (

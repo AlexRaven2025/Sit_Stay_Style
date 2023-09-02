@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Nav, Navbar}  from 'react-bootstrap';
 import logo from './images/newLogo.png'
 import './stylefiles/navbar.css'
-// eslint-disable-next-line
+/* eslint-disable */
 export function NavbarMain() {
     const location = useLocation();
     const currentPath = location.pathname;

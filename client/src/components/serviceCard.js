@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Card } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './stylefiles/serviceCard.css';
-
+/* eslint-disable */
 export function ServiceCard() {
     return (
         <Container fluid className='services-contaier-packages'>

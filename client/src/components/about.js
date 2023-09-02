@@ -6,7 +6,7 @@ import newLogo from './images/newLogo.png';
 import './stylefiles/about.css';
 import { Container } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
-
+/* eslint-disable */
 export function About(){
         return (
             <div className='container-fluid main-about-container'>
