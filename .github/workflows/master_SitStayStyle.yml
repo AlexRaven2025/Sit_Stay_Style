@@ -1,8 +1,6 @@
-on:
-  workflow_run:
-    workflows: ["build1.yaml"]
-    types:
-      - completed
+name: Azure dev
+  on:
+    workflow_dispatch:
 
 jobs:
   build:
