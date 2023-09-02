@@ -14,24 +14,13 @@ jobs:
 
       - name: Navigate to Client and Install Dependencies
         run: cd client && npm install
+        
       - name: Trigger Deployment
         if: success()
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN}}
-          script: | 
-            const { data: workflows } = await github.actions.listRepoWorkflows({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            const deploymentWorkflow = workflows.find((workflow) => workflow.name === 'master_SitStayStyle');
-            if (deploymentWorkflow) {
-              await github.actions.createWorkflowDispatch({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                workflow_id: deploymentWorkflow.id,
-                ref: 'master', 
-              });
-            }
-
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/master_SitStayStyle/dispatches \
+            -d '{"ref":"master"}'
       #build test scripts jest or reat-test libary
