@@ -19,7 +19,7 @@ jobs:
         if: success()
         run: |
           curl -L \
-            -X POST \
+            -X PUT \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
