@@ -46,5 +46,5 @@ jobs:
         with:
           app-name: 'SitStayStyle'
           slot-name: 'production'
-          publish-profile: ${{ secrets.SECRECT_PUBLISH }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_441dd273ff9a43b5b25c666f69c9316d }}
           package: ./client
