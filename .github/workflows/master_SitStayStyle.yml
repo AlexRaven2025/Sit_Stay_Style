@@ -40,16 +40,13 @@ jobs:
         with:
           name: node-app
 
-      - name: Azure Login
-        uses: Azure/login@v1
+
+      - name: 'Az CLI login'
+        uses: azure/login@v1
         with:
-          creds: |
-            {
-              "clientId": "${{ secrets.AZURE_CLIENTID }}",
-              "clientSecret": "${{ secrets.AZURE_CLIENTSECRET }}",
-              "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTIONID }}",
-              "tenantId": "${{ secrets.AZURE_TENANTID }}"
-            }
+          client-id: ${{ secrets.AZURE_CLIENTID }}
+          tenant-id: ${{ secrets.AZURE_TENANTID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTIONID }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
