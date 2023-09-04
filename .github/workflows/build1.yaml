@@ -4,7 +4,12 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+   
+
     steps:
+      - name: Clear Runner Cache
+        run: |
+          sudo rm -rf /home/runner/work/_actions
       - name: Checkout Repository
         uses: actions/checkout@v3
 
