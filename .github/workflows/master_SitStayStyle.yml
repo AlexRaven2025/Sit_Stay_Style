@@ -40,7 +40,8 @@ jobs:
         with:
           name: node-app
 
-      - name: Azure Login
+
+      - name: Set up Azure CLI
         uses: Azure/login@v1
         with:
           creds: |
@@ -51,11 +52,14 @@ jobs:
               "tenantId": "${{ secrets.AZURE_TENANTID }}"
             }
 
+      - name: Azure CLI Login
+        run: az login
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'SitStayStyle'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_3157d90e70ca465a88843876d8a2f449 }}
           package: ${{ runner.workspace }}/node-app.zip
