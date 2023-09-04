@@ -55,7 +55,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'SitStayStyle'
+          app-name: 'SitStayStyleGrooming'
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_3157d90e70ca465a88843876d8a2f449 }}
           package: ${{ runner.workspace }}/node-app.zip
