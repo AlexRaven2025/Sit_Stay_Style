@@ -41,10 +41,13 @@ jobs:
           name: node-app
 
 
-      - name: 'Az CLI login'
-        uses: azure/login@v1
+      - name: Set up Azure CLI
+        uses: Azure/login@v1
         with:
-          credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Azure CLI Login
+        run: az login
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
