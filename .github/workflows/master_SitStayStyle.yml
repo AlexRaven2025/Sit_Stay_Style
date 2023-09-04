@@ -42,7 +42,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
-
+      - name: Azure CLI Login
+        run: az login
+        
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
