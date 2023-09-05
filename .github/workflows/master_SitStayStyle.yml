@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_256FBB4486D745D48F3CB2D53B9790C9}}
           package: node-app.zip
