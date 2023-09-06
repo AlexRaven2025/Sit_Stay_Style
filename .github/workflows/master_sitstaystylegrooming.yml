@@ -50,6 +50,17 @@ jobs:
         with:
           name: node-app
 
+      - name: Set up Azure CLI
+        uses: Azure/login@v1
+        with:
+          creds: |
+            {
+              "clientId": "${{ secrets.AZURE_CLIENTID }}",
+              "clientSecret": "${{ secrets.AZURE_CLIENTSECRET }}",
+              "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTIONID }}",
+              "tenantId": "${{ secrets.AZURE_TENANTID }}"
+            }
+            
       - name: Remove Existing Content
         run: |
           az webapp stop --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group
