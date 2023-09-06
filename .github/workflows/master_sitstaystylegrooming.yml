@@ -50,6 +50,12 @@ jobs:
         with:
           name: node-app
 
+      - name: Remove Existing Content
+        run: |
+          az webapp stop --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group
+          az webapp deployment source delete --name SitStayStyleGrooming--resource-group SitStayStyle_Resource_Group --yes
+          az webapp start --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
