@@ -61,11 +61,6 @@ jobs:
               "tenantId": "${{ secrets.AZURE_TENANTID }}"
             }
 
-      - name: Remove Existing Content
-        run: |
-          az webapp stop --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group
-          az webapp deployment source delete --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group 
-          az webapp start --name SitStayStyleGrooming --resource-group SitStayStyle_Resource_Group
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
