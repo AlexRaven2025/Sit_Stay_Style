@@ -74,10 +74,31 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
+      - name: Download artifact from build job - node_modules
         uses: actions/download-artifact@v2
         with:
-          name: node-modules-artifact public-artifact src-artifact package-lock-artifact package-artifact
+          name: node-modules-artifact 
+      - name: Download artifact from build job - public
+        uses: actions/download-artifact@v2
+        with:
+          name: public-artifact
+
+      - name: Download artifact from build job - src
+        uses: actions/download-artifact@v2
+        with:
+          name: src-artifact 
+
+      - name: Download artifact from build job - package-lock
+        uses: actions/download-artifact@v2
+        with:
+          name: package-lock-artifact 
+
+      - name: Download artifact from build job package.json
+        uses: actions/download-artifact@v2
+        with:
+          name: package-artifact
+          
+          
 
       - name: Set up Azure CLI
         uses: Azure/login@v1
