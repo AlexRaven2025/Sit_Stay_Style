@@ -40,31 +40,31 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-modules-artifact
-          path: node_modules.zip
+          path: client/node_modules.zip
 
       - name: Upload artifact for deployment job - public
         uses: actions/upload-artifact@v2
         with:
           name: public-artifact
-          path: public.zip
+          path: client/public.zip
 
       - name: Upload artifact for deployment job - src
         uses: actions/upload-artifact@v2
         with:
           name: src-artifact
-          path: src.zip
+          path: client/src.zip
 
       - name: Upload artifact for deployment job - package-lock.json
         uses: actions/upload-artifact@v2
         with:
           name: package-lock-artifact
-          path: package-lock.zip
+          path: client/package-lock.zip
 
       - name: Upload artifact for deployment job - package.json
         uses: actions/upload-artifact@v2
         with:
           name: package-artifact
-          path: package.zip
+          path: client/package.zip
 
   deploy:
     runs-on: ubuntu-latest
