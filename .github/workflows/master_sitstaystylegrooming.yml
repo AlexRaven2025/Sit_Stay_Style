@@ -29,7 +29,6 @@ jobs:
           
       - name: Create ZIP Archives
         run: |
-          cd 
           zip -r client.zip client
 
       - name: Upload artifact for deployment job - client
