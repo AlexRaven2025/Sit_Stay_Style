@@ -70,4 +70,4 @@ jobs:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
-          package: ${{ runner.workspace }}
+          package: client-artifact
