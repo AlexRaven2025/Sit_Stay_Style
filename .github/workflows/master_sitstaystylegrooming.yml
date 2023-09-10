@@ -60,9 +60,6 @@ jobs:
               "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTIONID }}",
               "tenantId": "${{ secrets.AZURE_TENANTID }}"
             }
-
-      - name: List workspace contents
-        run: ls -l ${{ runner.workspace }}
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -70,4 +67,4 @@ jobs:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
-          package: client-artifact
+          package: client
