@@ -29,7 +29,7 @@ jobs:
           
       - name: Create ZIP Archives
         run: |
-          zip -r client.zip ./client/public ./client/src ./client/package.json ./client/package-lock.json
+          zip -r client.zip ./client/public ./client/src ./client/package.json  # ./client/package-lock.json
 
       - name: Upload artifact for deployment job - client
         uses: actions/upload-artifact@v2
