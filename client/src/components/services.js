@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarMain from './navbar';
 import Foot from './footer';
-import { Col, Container, ListGroup, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './stylefiles/services.css';
 import ServiceCard from './serviceCard';
