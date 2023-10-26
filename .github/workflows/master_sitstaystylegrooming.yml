@@ -29,30 +29,13 @@ jobs:
           
       - name: Create ZIP Archives
         run: |
-          cd client
-          zip -r client.zip ./client/public ./client/components ./client/src
-
-      - name: Create ZIP Archive - package.json and package-lock.json
-        run: |
-          zip package.zip package.json package-lock.json
+          zip -r client.zip ./client/public ./client/components ./client/src  ./package.json  ./package-lock.json
 
       - name: Upload artifact for deployment job - client
         uses: actions/upload-artifact@v2
         with:
           name: client-artifact
           path: client.zip
-
-      - name: Upload artifact for deployment job - package-lock.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: package-lock-json-artifact
-          path: package-lock.json.zip
-
-      - name: Upload artifact for deployment job - package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: package-json-artifact
-          path: package.json.zip 
 
   deploy:
     runs-on: ubuntu-latest
@@ -84,5 +67,4 @@ jobs:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
-          package: client.zip package-json.zip package-lock-json.zip
-
+          package: client.zip
