@@ -2,7 +2,6 @@ import React from 'react';
 import NavbarMain from './navbar';
 import Foot from './footer';
 import yuriah1 from './images/yuriah1.jpg';
-import newLogo from './images/newLogo.png';
 import './stylefiles/about.css';
 import { Container } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
@@ -13,6 +12,8 @@ export function About(){
                 <NavbarMain />
                 <Container fluid className='custom-about-section'>
                     <h1>About Sit Stay Styles</h1>
+                    
+                    <Image src={yuriah1} fluid className='custom-image-about1'/>
                     <p>With a grooming journey that spans over 13 enriching years,
                         I am proud to offer a wealth of experience that truly understands the needs of
                         our beloved pets. With a remarkable 13+ years of specializing in dog grooming
@@ -28,16 +29,8 @@ export function About(){
                                  Blake brings a wealth of expertise that has not only honed my skills but also deepened my passion for delivering exceptional </p>
                                  <p>grooming experiences. From tail-wagging dogs to curious cats, my dedication remains unwavering – to ensure every pet leaves not
                                      just looking their best, but feeling their best, in a unique style that's as cruelty-free as it is creative.</p>
-                                     <Image src={newLogo} className='about-logo1' />
+                                     
                 </Container>
-            <Container fluid className='custom-image-container'>
-                    <div className='image-background'>
-                    <Image src={yuriah1} fluid className='custom-image-about1'/>
-                    </div>
-            </Container>
-
-
-
                 <Foot />
             </div>
         );

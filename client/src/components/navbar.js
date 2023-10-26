@@ -20,7 +20,7 @@ export function NavbarMain() {
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto ">
+                <Nav className="ms-auto custom-spaceing">
                     <NavLink className="mr-3"as={Link} to="/" >Home</NavLink>
                     <NavLink className='mx-3'as={Link} to="/about">About</NavLink>
                     <NavLink className='mx-2'as={Link} to="/services">Services</NavLink>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import NavbarMain from './navbar';
 import Foot from './footer';
 import './stylefiles/bookNow.css';
-import bookNow1 from './images/booknow1.jpeg';
 import BookNowContactCard from './bookNowContactCard';
 import { Button, Container, Form, FormControl } from 'react-bootstrap';
 /* eslint-disable */
@@ -19,14 +18,12 @@ export function BookNow(){
         return (
             <Container fluid className='main-bookNow-custom'>
                 <NavbarMain/>
-            <Container fluid className='left-aside-photo-booknow'>
-                <img src={bookNow1} className="img-fluid custom-image1" alt="Responsive image"/>
-            </Container>
+            
+                
+            <Container fluid className='socialmedia-links'> </Container>
                 <Container fluid className='boknow-button'> <Button onClick={showPopUp}>BookNow</Button></Container>
                     <BookNowContactCard showModal={showModal} handleClose={handleClose} />
-            <Container fluid className='socialmedia-links'> </Container>
-
-            <Container fluid className='right-aside-booknow-photo'> </Container>
+           
 
             <Container fluid className='trouble-message'> 
                 <p>If you have any questions or encounter any issues with

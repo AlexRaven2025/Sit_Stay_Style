@@ -2,18 +2,10 @@
 
 .main-about-container{
     background-color: gray;
-    height: 85vh;
+    height: 90vh;
     margin-top: 6em;
 }
-.custom-about-section{
-            float: left;
-            margin-left: -0.6em;
-            width: 49vw;
-            height: 85vh;
-            padding: 20px;
-            background-color: #e8e7e7;
-            box-shadow: 0 2px 10px gold;
-        }
+
     .custom-about-section    h1 {
         margin-top: 1em;
             text-align: center;
@@ -21,22 +13,13 @@
             color: #212020;
         }
      .custom-about-section   p {
-        text-align: center;
+            text-align: center;
+            width: 50em;
+            padding: 1em;
             color: black;
             font-weight: bold;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-bottom: 15px;
-        }
-        .image-background{
-            height: 50em;
-            width: 40em;
-            background-color:white ;
-            margin-top: 5em;
-            margin-right: 10em;
-            float: right;
-            background-color: gold;
-            border-radius: 50%;
-
         }
     .about-logo1{
         margin-top: 1em;
@@ -47,11 +30,13 @@
        
     }
 
-.custom-image-about1{
+.custom-image-about1 {
     height: 30em;
-    width: 25em;
-    margin:7em ;
-    margin-top: 9em;
+    width: auto;
+    position: relative;
+    margin: 5em;
+    margin-top: 2em;
+    margin-right: -14em;
     float: right;
     border-radius: 2%;
 }
@@ -60,22 +45,16 @@
     z-index: 2; /* Place above images */
     padding: 20px; /* Use relative units for padding */
  /* Add border radius for a container-like appearance */
-    /* margin: 10px; */
+   width: 50em;
 }
+
 
 .custom-image-about1 {
     position: relative;
     z-index: 1; /* Lower z-index to place below .custom-about-section */
 }
 
-.custom-image-container{
-    background-color: rgba(112, 111, 105, 0.886);
-    float: right;
-    margin-right: -0.6em;
-    height: 85vh;
-    width: 49vw;
-    box-shadow: 0 2px 10px gold;
-}
+
 /* Media query to apply overlay effect for smaller screens */
 @media (max-width: 767px) {
     .custom-about-section {

@@ -6,6 +6,10 @@
     width: auto;
 }
 .navbar-dark .navbar-nav .nav-link.active {
+    
     font-weight: bold;
     color: #fdf7f7; /* Change the color to your preference */
+}
+.custom-spaceing{
+    margin-right:10em;
 }

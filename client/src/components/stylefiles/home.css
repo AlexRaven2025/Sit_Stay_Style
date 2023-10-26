@@ -48,6 +48,12 @@
     white-space: pre-line; /* Preserve line breaks and spaces */
 }
 .custom-home-image{
-    height: 45em;
+    height: 35em;
     margin-bottom: 10em;
+    margin-left: 15em;
+}
+.HomePageContainer{
+    font-size: large;
+    line-height: 3em;
+    text-wrap:balance ;
 }

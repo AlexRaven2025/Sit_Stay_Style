@@ -24,15 +24,15 @@ grooming experiences for your beloved pets.
     <section className='text-section py-4'>
         <div className="container-XXL  bg-light p-4">
             <div className="row">
-                <div className="col-lg-6 text-center mb-5">
+                <div className="col-lg-6 text-center">
                     <h1 className="display-4">Welcome to Sit Stay Style</h1>
-                    <pre className="lead">    Welcome to Sit Stay Styles, the ultimate destination for pet</pre>
-                     <pre className="lead">   pampering. Our commitment to satisfaction extends to every pet, from playful</pre>
-                     <pre className="lead">   pups to curious cats. With over 13 years of grooming experience, we're your</pre>
-                     <pre className="lead">   trusted choice for top-notch pet care. Our journey includes training from</pre>
-                     <pre className="lead">   esteemed show groomers, including the renowned Blake Hernandez. Serving the</pre>
-                     <pre className="lead">   Central Texas community, we're excited to offer a grooming haven where both</pre>
-                     <pre className="lead">   Dogs and cats can experience unparalleled comfort and style</pre>
+                    <p className='HomePageContainer '>  Welcome to Sit Stay Styles, the ultimate destination for pet
+                       pampering. Our commitment to satisfaction extends to every pet, from playful
+                       pups to curious cats. With over 13 years of grooming experience, we're your
+                        trusted choice for top-notch pet care. Our journey includes training from
+                       esteemed show groomers, including the renowned Blake Hernandez. Serving the
+                        Central Texas community, we're excited to offer a grooming haven where both
+                        Dogs and cats can experience unparalleled comfort and style</p>
                     
                 </div>
                 <div className="col-lg-6 ">
