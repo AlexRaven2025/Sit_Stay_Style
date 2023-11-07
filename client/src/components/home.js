@@ -72,7 +72,7 @@ export function Home() {
                 <div className="container bg-light p-4">
                     <div className="row">
                         <div className="col-lg-6">
-                            <img src={home_pic1} alt="Main Home Image" className="img-fluid rounded custom-home-image" />
+                            <img src={home_pic1} alt="Main_Home_Image" className="img-fluid rounded custom-home-image" />
                         </div>
                         <div className="col-lg-6 text-center">
                             <h1 className="display-4">Welcome to Sit Stay Style</h1>
