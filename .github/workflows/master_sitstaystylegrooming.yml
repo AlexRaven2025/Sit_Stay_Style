@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '18.17.1'
 
       - name: npm install, build, and test
         run: |
@@ -33,7 +33,7 @@ jobs:
 
       - name: Create ZIP Archives
         run: |
-          zip -r client.zip ./client
+          zip -r client.zip ./ -x "node_modules/*"
 
       - name: Upload artifact for deployment job - client
         uses: actions/upload-artifact@v2
