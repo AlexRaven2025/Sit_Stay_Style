@@ -1,67 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavbarMain from './navbar';
 import Foot from './footer';
 import './stylefiles/bookNow.css';
-import BookNowContactCard from './bookNowContactCard';
-import { Button, Container, Form, FormControl } from 'react-bootstrap';
-/* eslint-disable */
-export function BookNow(){
-    const [showModal, setShowModal] = useState(false);
+import { Container } from 'react-bootstrap';
 
-    const showPopUp = () => {
-        setShowModal(true);
-    }
+export function BookNow() {
+    return (
+        <div className='main-bookNow-custom'>
+            <NavbarMain />
 
-    const handleClose = () => {
-        setShowModal(false);
-    }
-        return (
-            <Container fluid className='main-bookNow-custom'>
-                <NavbarMain/>
-            
-                
-            <Container fluid className='socialmedia-links'> </Container>
-                <Container fluid className='boknow-button'> <Button onClick={showPopUp}>BookNow</Button></Container>
-                    <BookNowContactCard showModal={showModal} handleClose={handleClose} />
-           
-
-            <Container fluid className='trouble-message'> 
-                <p>If you have any questions or encounter any issues with
-our website, please don't hesitate to reach out to our friendly support team.
-We're here to assist you and ensure your experience with us is smooth and
-enjoyable.</p></Container>
-
-            <Container fluid className='form-booknow'>
-                <Form >
-                    <Form.Group className='mb-3' controlId='formBasicName'>
-                        <Form.Label>Name</Form.Label>
-                        <FormControl type='email' placeholder='please Enter your Name' />
-                    </Form.Group>
-                    <Form.Group className='mb-3' controlId='formBasicEmail'>
-                        <Form.Label>Email Address</Form.Label>
-                        <FormControl type='email' placeholder='please Enter you Email' />
-                        <Form.Text className='text-muted'>we'll never share your email with anyone else</Form.Text>
-                    </Form.Group>
-                    <Form.Group className='mb-3' controlId='MessageDescription'>
-                        <Form.Label>Message</Form.Label>
-                        <FormControl type='email' placeholder='please Enter your message' />
-                    </Form.Group>
-                    <Button variant='primary' type='submit'>
-                        Submit
-                    </Button>
-                </Form>
-            </Container>
-
-
-
-
-
-
+            {/* Cover Background */}
+            <div className="cover-background">
+                <Container className='booknow-info'>
+                    <h1>Welcome to Our Booking Page</h1>
+                    <p>If you would like to book our services, please don't hesitate to get in touch with us. We're here to make your experience exceptional.</p>
+                    
+                    <div className="contact-details">
+                        <p>Contact us at:</p>
+                        <p>Phone: +123-456-7890</p>
+                        <p>Email: info@example.com</p>
+                    </div>
+                </Container>
+            </div>
 
             <Foot />
-            </Container>
-        );
-    
+        </div>
+    );
 }
 
 export default BookNow;

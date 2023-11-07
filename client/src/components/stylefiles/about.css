@@ -1,8 +1,8 @@
-
+/* 
 
 .main-about-container{
     background-color: gray;
-    height: 90vh;
+    height: 99vh;
     margin-top: 6em;
 }
 
@@ -41,31 +41,86 @@
     border-radius: 2%;
 }
 .custom-about-section {
-    position: relative; /* Set as relative positioning */
-    z-index: 2; /* Place above images */
-    padding: 20px; /* Use relative units for padding */
- /* Add border radius for a container-like appearance */
+    position: relative; 
+    z-index: 2; 
+    padding: 20px; 
+ 
    width: 50em;
 }
 
 
 .custom-image-about1 {
     position: relative;
-    z-index: 1; /* Lower z-index to place below .custom-about-section */
+    z-index: 1; 
 }
 
 
-/* Media query to apply overlay effect for smaller screens */
+
 @media (max-width: 767px) {
     .custom-about-section {
-        background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
-        padding: 20px; /* Adjust padding for better readability */
-        border-radius: 10px; /* Add border radius for a container-like appearance */
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 20px; 
+        border-radius: 10px; 
     }
 }
 @media (max-width: 767px) {
     .custom-about-section {
         height: auto; 
-        width: auto; /* Allow container to adjust width based on content */
+        width: auto; 
+    }
+} */
+
+
+/* Main Container */
+.main-about-container {
+    background-color: lightgray; /* A light gray background color */
+    min-height: 100vh;
+    margin-top: 6em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Custom About Section */
+.custom-about-section {
+    background: rgb(236, 236, 236); /* White background for the content */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+}
+
+/* About Heading */
+.custom-about-section h1 {
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 1em;
+}
+
+/* About Text */
+.custom-about-section p {
+    text-align: center;
+    color: black; /* Dark gray text color */
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 3em;
+}
+
+/* About Image */
+.custom-image-about1 {
+    max-width: 100%;
+    display: block;
+    height:35em;
+    margin: 0 auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the image */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .custom-about-section {
+        padding: 2em;
     }
 }

@@ -1,5 +1,5 @@
 .main-services-container{
-    height: 175vh;
+    height: 185vh;
     width: 99vw;
     background-color: lightgray;
     
@@ -12,7 +12,7 @@
     flex-wrap: wrap;
     height:30em;
     width: 258em;
-    margin-top: 50em;
+    margin-top: 55em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,9 +20,9 @@
 .column {
     display: flex;
     align-items: center;
-    flex: 0 0 50%; /* This makes each item take up 50% of the container width */
-    padding: 20px; /* Add padding for spacing between items */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    flex: 0 0 50%; 
+    padding: 20px; 
+    box-sizing: border-box; 
     text-align: center;
 }
 .column p{
@@ -34,7 +34,7 @@
 .random-phrase-bottom{
     background-color: lightgray;
     text-align: center;
-    margin-top: 30em;
+    margin-top: 25em;
     width: 99vw;
   
 }

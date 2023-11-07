@@ -1,13 +1,13 @@
-
+/* 
 .main-home-container{
     min-height: 100vh;
    
 }
 .homebanner {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 100vh; /* Set height of container to 100% viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
 }
 
 .image-container {
@@ -45,7 +45,7 @@
     color: #333;
     text-align: left;
     font-size: 18px;
-    white-space: pre-line; /* Preserve line breaks and spaces */
+    white-space: pre-line; 
 }
 .custom-home-image{
     height: 35em;
@@ -56,4 +56,55 @@
     font-size: large;
     line-height: 3em;
     text-wrap:balance ;
+}  */
+
+
+
+.home-container {
+    min-height: 100vh;
+}
+
+.image-container {
+    max-width: 100%;
+    margin-top: 96px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    background-color: gold;
+}
+
+.custom-image {
+    width: 98em;
+    height: 32em;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    transform: translate(74%, 50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.overlay-text {
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+.custom-home-image {
+    height: 35em;
+    margin-bottom: 9em;
+    margin-left: 6em;
+}
+
+.home-description {
+    font-size: large;
+    line-height: 3em;
+    text-wrap: balance;
 }
