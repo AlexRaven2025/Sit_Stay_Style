@@ -71,5 +71,5 @@ jobs:
         with:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EC5F47C82A54A16B95B677E0E7FA4D3 }}
           package: client.zip
