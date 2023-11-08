@@ -5,6 +5,10 @@ module.exports = {
       script: "npm",
       args: "start",
       interpreter: "none",
+      env: {
+        PORT: 8080, // Set the desired port number here
+      },
     },
   ],
 };
+
