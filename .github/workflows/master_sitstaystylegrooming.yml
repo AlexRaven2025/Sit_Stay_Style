@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '18.17.1'
 
@@ -36,7 +36,7 @@ jobs:
           zip -r client.zip ./ -x "node_modules/*"
 
       - name: Upload artifact for deployment job - client
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: client-artifact
           path: client.zip
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job - client
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: client-artifact
 
