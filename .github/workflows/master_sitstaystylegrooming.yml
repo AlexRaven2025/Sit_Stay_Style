@@ -33,7 +33,7 @@ jobs:
 
       - name: Create ZIP Archives
         run: |
-          zip -r client.zip ./ -x "node_modules/*"
+          zip -r client.zip ./ -X "client/node_modules"
 
       - name: Upload artifact for deployment job - client
         uses: actions/upload-artifact@v3
