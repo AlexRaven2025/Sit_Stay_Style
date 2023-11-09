@@ -63,7 +63,7 @@ jobs:
           npm install -g npm@10.2.3 --prefix ./client/node_modules
           npm cache clean -f
           chmod -R 755 ./client/node_modules
-          npm ci
+          npm install
 
       - name: Set up Azure CLI
         uses: Azure/login@v1
