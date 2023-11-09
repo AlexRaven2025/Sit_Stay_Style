@@ -57,14 +57,6 @@ jobs:
         with:
           name: client-artifact
 
-      # Add the following steps to adjust npm permissions and configurations
-      - name: Set npm prefix and install
-        run: |
-          npm install -g npm@10.2.3 --prefix ./client/node_modules
-          npm cache clean -f
-          chmod -R 755 ./client/node_modules
-          npm install
-
       - name: Set up Azure CLI
         uses: Azure/login@v1
         with:
