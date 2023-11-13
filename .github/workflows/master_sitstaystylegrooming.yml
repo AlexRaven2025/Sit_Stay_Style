@@ -28,7 +28,7 @@ jobs:
           npm run build --if-present
       
       - name: List Files in Build Directory
-        run: ls -R ./build
+        run: ls -R ./client/build
 
       - name: List Files in Directory
         run: ls -R
