@@ -31,18 +31,17 @@ jobs:
         run: ls -R
         working-directory: ./client
 
-      - name: Create ZIP Archives
-        run: |
-          zip -r client.zip ./ -x "./client/node_modules/*"
+      - name: Create ZIP Archive
+        run: zip -r client-build.zip ./build/*
 
       - name: Upload artifact for deployment job - client
         uses: actions/upload-artifact@v3
         with:
           name: client-artifact
-          path: client.zip
+          path: client-build.zip
 
       - name: List Artifact Contents
-        run: unzip -l client.zip
+        run: unzip -l client-build.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -75,5 +74,5 @@ jobs:
           app-name: 'SitStayStyleGrooming'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
-          package: client.zip
+          package: client-build.zip
 
