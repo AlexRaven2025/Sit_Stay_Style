@@ -78,4 +78,5 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1C16759A3734B5F88A9C39AC2BDDA09 }}
           package: client-build.zip
+          startup-command: 'cd /home/site/wwwroot/client && npx serve -s build'
 
